@@ -1,67 +1,56 @@
-🧠 Mini Audit Trail Generator
+Mini Audit Trail Generator
 
-A full-stack application built using Next.js, React, and TypeScript that automatically tracks text changes and maintains a version history audit trail. Every modification captures added/removed words, timestamp, word count, and unique version ID.
-
-🎯 Designed as a scenario-based intern task to prove originality, logic-building, and full-stack skills.
+A full-stack application built using Next.js, React, and TypeScript that automatically tracks text changes and maintains a version history audit trail. Every modification captures added words, removed words, timestamp, word count, and unique version ID.
+Designed as a scenario-based intern task to prove originality, logic-building, and full-stack skills.
 
 🚀 Features
 Feature	Description
-📝 Text Editor	Simple editor where user types content
-💾 Save Version	Each click stores the updated text
-🔍 Change Detection	Compares previous & new text
-➕ Added Words	Tracks what was newly typed
-➖ Removed Words	Detects deleted words
-⏱ Timestamp	Records exact date & time
-🔑 Unique Version ID	Each version gets a UUID
-📜 Version History Panel	Displays all saved changes
+Text Editor	User types any content
+Save Version	Stores updated version
+Change Detection	Compares previous & new text
+Added Words	Tracks newly typed words
+Removed Words	Detects deleted words
+Timestamp	Captures exact date & time
+UUID	Generates unique version ID
+Version History	Lists all saved versions
 🧬 Tech Stack
 Category	Technology
-Frontend	React + Next.js
+Frontend	Next.js (React + TypeScript)
 Backend	Next.js API Routes
-Language	TypeScript
-Styling	Inline styles (basic CSS)
+Styling	Inline CSS
 Storage	In-memory array
 Deployment	Vercel
 Version Control	Git & GitHub
-📂 Folder Structure
+📁 Folder Structure
 mini-audit-trail/
 │── app/
-│   ├── page.tsx          # UI & frontend logic
+│   ├── page.tsx
 │   ├── api/
-│   │   ├── save-version/route.ts  # POST – Save version
-│   │   └── versions/route.ts      # GET – Fetch versions
-│── public/               # Images
+│   │   ├── save-version/route.ts
+│   │   └── versions/route.ts
+│── public/
 │── package.json
 │── README.md
 │── tsconfig.json
 │── next.config.ts
 
-📡 API Endpoints
+🔗 API Endpoints
 Method	Endpoint	Description
-POST	/api/save-version	Saves a new version of text
-GET	/api/versions	Returns version history
-🖥️ How to Run Locally
-# Install dependencies
+POST	/api/save-version	Save new version
+GET	/api/versions	Fetch version history
+🖥️ Run Locally
 npm install
-
-# Start development server
 npm run dev
 
 
-Then visit 👉 http://localhost:3000
+Then visit: http://localhost:3000
 
 🌐 Live Demo
 
-🔗 Live URL: Add your Vercel link here once deployed
-🔗 GitHub Repository: https://github.com/usmanshaik6/mini-audit-trail
+👉 Live URL: (Add your Vercel link here after deployment)
+👉 GitHub Repository: https://github.com/usmanshaik6/mini-audit-trail
 
-🧪 Sample Output
-
-When you update text from
-Hello → Hello world project
-
-API returns:
-
+📊 Sample API Response
 {
   "id": "uuid",
   "timestamp": "2025-11-29 23:45",
@@ -71,23 +60,30 @@ API returns:
   "newLength": 17
 }
 
-🧠 What I Learned
+📚 What I Learned
 
-✔ Next.js API Routes
-✔ State management using React hooks
-✔ String comparison logic
-✔ Timestamps and UUID generation
-✔ Debugging and full-stack integration
-✔ Deployment process via Vercel
-✔ Version control using Git & GitHub
+How to use Next.js API Routes
 
-📞 Contact
+State management using React Hooks
 
-👤 Shaik Usman
-📧 shaikusman0517@gmail.com
+Implementing string comparison logic
 
-💻 GitHub: https://github.com/usmanshaik6
+Generating timestamps & UUID
 
-📱 Passionate Frontend Developer & Intern
+Debugging and full-stack integration
 
-⭐ If you found this project interesting, give it a star on GitHub!
+Deployment using Vercel
+
+Git & GitHub workflow
+
+👤 Contact
+
+Name: Shaik Usman
+
+Email: shaikusman0517@gmail.com
+
+GitHub: https://github.com/usmanshaik6
+
+⭐ Support
+
+If you liked this project, consider giving it a ⭐ on GitHub!
