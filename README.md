@@ -36,6 +36,7 @@ Designed as a **scenario-based intern task** to prove originality, logic-buildin
 ---
 
 ### 📁 Folder Structure
+---
 mini-audit-trail/
 │── app/
 │ ├── page.tsx
