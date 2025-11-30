@@ -71,10 +71,9 @@ Then visit:
 
 ## 🌐 Live Demo
 
-🔗 **Application URL**  
-https://mini-audit-trail-alpha.vercel.app/
+🔗 **Live Demo:**  
+[https://mini-audit-trail-alpha.vercel.app/](https://mini-audit-trail-alpha.vercel.app/)
 
-[![Visit Live Site](https://img.shields.io/badge/Visit-Live%20Project-green?style=for-the-badge&logo=vercel)](https://mini-audit-trail-alpha.vercel.app/)
 
 
 
