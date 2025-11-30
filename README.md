@@ -70,8 +70,7 @@ Then visit:
 👉 http://localhost:3000
 
 ## 🌐 Live Demo
-
-Live URL: Add your Vercel link here after deployment
+🔗 https://mini-audit-trail-alpha.vercel.app/
 
 GitHub Repository: https://github.com/usmanshaik6/mini-audit-trail
 
