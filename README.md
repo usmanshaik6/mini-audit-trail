@@ -34,21 +34,21 @@ Designed as a **scenario-based intern task** to prove originality, logic-buildin
 | Version Control | Git & GitHub |
 
 ---
-
 ### 📁 Folder Structure
----
+
+```
 mini-audit-trail/
 │── app/
-│ ├── page.tsx
-│ ├── api/
-│ │ ├── save-version/route.ts
-│ │ └── versions/route.ts
+│   ├── page.tsx
+│   ├── api/
+│   │   ├── save-version/route.ts
+│   │   └── versions/route.ts
 │── public/
 │── package.json
 │── README.md
 │── tsconfig.json
 │── next.config.ts
-
+```
 
 ---
 
