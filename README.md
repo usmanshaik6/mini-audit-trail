@@ -36,5 +36,77 @@ Designed as a **scenario-based intern task** to prove originality, logic-buildin
 ---
 
 ## 📁 Folder Structure
+mini-audit-trail/
+│── app/
+│ ├── page.tsx
+│ ├── api/
+│ │ ├── save-version/route.ts
+│ │ └── versions/route.ts
+│── public/
+│── package.json
+│── README.md
+│── tsconfig.json
+│── next.config.ts
 
 
+---
+
+## 🔗 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/save-version | Save new version |
+| GET | /api/versions | Fetch version history |
+
+---
+
+## 🖥️ Run Locally
+
+```bash
+npm install
+npm run dev
+Then visit:
+👉 http://localhost:3000
+
+🌐 Live Demo
+
+Live URL: Add your Vercel link here after deployment
+
+GitHub Repository: https://github.com/usmanshaik6/mini-audit-trail
+
+📊 Sample API Response
+{
+  "id": "uuid",
+  "timestamp": "2025-11-29 23:45",
+  "addedWords": ["world", "project"],
+  "removedWords": [],
+  "oldLength": 5,
+  "newLength": 17
+}
+
+📚 What I Learned
+
+How to use Next.js API Routes
+
+State management using React Hooks
+
+Implementing string comparison logic
+
+Generating timestamps & UUID
+
+Debugging and full-stack integration
+
+Deployment using Vercel
+
+Git & GitHub workflow
+
+👤 Contact
+
+Name: Shaik Usman
+Email: shaikusman0517@gmail.com
+
+GitHub: https://github.com/usmanshaik6
+
+⭐ Support
+
+If you liked this project, please give it a ⭐ on GitHub!
