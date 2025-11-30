@@ -37,8 +37,8 @@ export async function POST(request: Request) {
   const oldSet = new Set(oldWords);
   const newSet = new Set(newWords);
 
-  const addedWords = newWords.filter((w) => !oldSet.has(w));
-  const removedWords = oldWords.filter((w) => !newSet.has(w));
+  const addedWords = newWords.filter((w: string) => !oldSet.has(w));
+  const removedWords = oldWords.filter((w: string) => !newSet.has(w));
 
   const entry: VersionEntry = {
     id: randomUUID(),
