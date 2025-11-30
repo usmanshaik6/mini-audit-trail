@@ -70,7 +70,7 @@ Then visit:
 👉 http://localhost:3000
 
 ## 🌐 Live Demo
-🔗 https://mini-audit-trail-alpha.vercel.app/
+🔗 **https://mini-audit-trail-alpha.vercel.app/**
 
 GitHub Repository: https://github.com/usmanshaik6/mini-audit-trail
 
