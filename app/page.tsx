@@ -21,7 +21,7 @@ export default function Home() {
     async function loadVersions() {
       try {
         const res = await fetch("/api/versions");
-        // ❌ don't throw, just log if it fails
+        // Don't crash UI if this fails – just log it
         if (!res.ok) {
           console.warn("Could not load versions, status:", res.status);
           return;
@@ -71,100 +71,122 @@ export default function Home() {
     <div
       style={{
         minHeight: "100vh",
-        padding: "2rem",
-        fontFamily: "Arial",
-        background: "#f4f4f5",
+        padding: "1.5rem 1rem",
+        fontFamily: "Arial, sans-serif",
+        background: "#e5e7eb", // light grey background
       }}
     >
-      <h1 style={{ fontSize: "24px", marginBottom: "1rem" }}>
-        Mini Audit Trail Generator
-      </h1>
-
+      {/* center content and limit max width */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 1fr",
-          gap: "1.5rem",
+          maxWidth: "960px",
+          margin: "0 auto",
         }}
       >
-        {/* Content Editor */}
-        <div
+        <h1
           style={{
-            background: "white",
-            padding: "1rem",
-            borderRadius: "8px",
+            fontSize: "24px",
+            marginBottom: "1rem",
+            color: "#111827",
           }}
         >
-          <h2>Content Editor</h2>
-          <textarea
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            rows={10}
+          Mini Audit Trail Generator
+        </h1>
+
+        {/* Main layout: single column (good for mobile + desktop) */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.5rem",
+          }}
+        >
+          {/* Content Editor */}
+          <div
             style={{
-              width: "100%",
-              padding: "10px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-            }}
-            placeholder="Type here..."
-          />
-          <button
-            onClick={handleSave}
-            style={{
-              marginTop: "10px",
-              padding: "10px 20px",
-              backgroundColor: "#2563eb",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
+              background: "white",
+              padding: "1rem",
+              borderRadius: "8px",
+              color: "#111827",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
             }}
           >
-            Save Version
-          </button>
-        </div>
+            <h2 style={{ marginBottom: "0.5rem" }}>Content Editor</h2>
+            <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              rows={8}
+              style={{
+                width: "100%",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #cbd5f5",
+                fontSize: "14px",
+                color: "#111827",
+                resize: "vertical",
+              }}
+              placeholder="Type here..."
+            />
+            <button
+              onClick={handleSave}
+              style={{
+                marginTop: "10px",
+                padding: "10px 20px",
+                backgroundColor: "#2563eb",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                fontSize: "14px",
+              }}
+            >
+              Save Version
+            </button>
+          </div>
 
-        {/* Version History */}
-        <div
-          style={{
-            background: "white",
-            padding: "1rem",
-            borderRadius: "8px",
-            maxHeight: "70vh",
-            overflowY: "auto",
-          }}
-        >
-          <h2>Version History</h2>
-          {versions.length === 0 ? (
-            <p>No versions yet</p>
-          ) : (
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {versions.map((v) => (
-                <li
-                  key={v.id}
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "8px 0",
-                    fontSize: "14px",
-                  }}
-                >
-                  <div>
-                    <strong>🕒 {v.timestamp}</strong>
-                  </div>
-                  <div>
-                    ➕ <b>Added:</b> {v.addedWords.join(", ") || "None"}
-                  </div>
-                  <div>
-                    ➖ <b>Removed:</b>{" "}
-                    {v.removedWords.join(", ") || "None"}
-                  </div>
-                  <div>
-                    📏 <b>Length:</b> {v.oldLength} → {v.newLength}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
+          {/* Version History */}
+          <div
+            style={{
+              background: "white",
+              padding: "1rem",
+              borderRadius: "8px",
+              maxHeight: "70vh",
+              overflowY: "auto",
+              color: "#111827",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+            }}
+          >
+            <h2 style={{ marginBottom: "0.5rem" }}>Version History</h2>
+            {versions.length === 0 ? (
+              <p style={{ fontSize: "14px" }}>No versions yet</p>
+            ) : (
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {versions.map((v) => (
+                  <li
+                    key={v.id}
+                    style={{
+                      borderBottom: "1px solid #e5e7eb",
+                      padding: "8px 0",
+                      fontSize: "14px",
+                    }}
+                  >
+                    <div style={{ marginBottom: "2px" }}>
+                      <strong>🕒 {v.timestamp}</strong>
+                    </div>
+                    <div>
+                      ➕ <b>Added:</b> {v.addedWords.join(", ") || "None"}
+                    </div>
+                    <div>
+                      ➖ <b>Removed:</b> {v.removedWords.join(", ") || "None"}
+                    </div>
+                    <div>
+                      📏 <b>Length:</b> {v.oldLength} → {v.newLength}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </div>
