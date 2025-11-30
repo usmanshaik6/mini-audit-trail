@@ -68,7 +68,7 @@ npm run dev
 Then visit:
 👉 http://localhost:3000
 
-🌐 Live Demo
+## 🌐 Live Demo
 
 Live URL: Add your Vercel link here after deployment
 
