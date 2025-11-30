@@ -71,9 +71,11 @@ Then visit:
 
 ## 🌐 Live Demo
 
-🔗 https://mini-audit-trail-alpha.vercel.app/
+🔗 **Application URL**  
+https://mini-audit-trail-alpha.vercel.app/
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-Green)](https://mini-audit-trail-alpha.vercel.app/)
+[![Visit Live Site](https://img.shields.io/badge/Visit-Live%20Project-green?style=for-the-badge&logo=vercel)](https://mini-audit-trail-alpha.vercel.app/)
+
 
 
 GitHub Repository: https://github.com/usmanshaik6/mini-audit-trail
